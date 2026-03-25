@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>Kuljeet Kumar Singh – Data Analyst &amp; Digital Marketing Specialist</title>
+  <meta name="description" content="Portfolio of Kuljeet Kumar Singh – Data Analyst, Digital Marketing Specialist, and Automation Expert based in Ranchi, Jharkhand."/>
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { -webkit-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --surface2: #1a1a26;
+      --surface3: #20202e;
+      --accent: #6c63ff;
+      --accent2: #ff6584;
+      --accent3: #43e97b;
+      --accent4: #f9ca24;
+      --text: #e8e8f0;
+      --muted: #8888a8;
+      --border: rgba(108,99,255,.18);
+      --border2: rgba(108,99,255,.08);
+      --glow: rgba(108,99,255,.25);
+      --glow2: rgba(255,101,132,.25);
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 28px;
+      --transition: all .3s cubic-bezier(.4,0,.2,1);
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ===== CUSTOM CURSOR (hidden on touch) ===== */
+    @media (hover: hover) and (pointer: fine) {
+      body { cursor: none; }
+      .cursor { width: 10px; height: 10px; background: var(--accent); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: screen; -webkit-transition: -webkit-transform .1s; transition: -webkit-transform .1s; transition: transform .1s; transition: transform .1s, -webkit-transform .1s; will-change: left, top; }
+      .cursor-ring { width: 34px; height: 34px; border: 1.5px solid var(--accent); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9998; opacity: .5; -webkit-transition: opacity .2s, -webkit-transform .18s; transition: opacity .2s, -webkit-transform .18s; transition: opacity .2s, transform .18s; transition: opacity .2s, transform .18s, -webkit-transform .18s; will-change: left, top; }
+    }
+
+    /* ===== NOISE OVERLAY ===== */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: .35;
+    }
+
+    /* ===== KEYFRAMES ===== */
+    @-webkit-keyframes floatA { 0%,100%{-webkit-transform:translate(0,0);transform:translate(0,0)} 50%{-webkit-transform:translate(30px,-30px);transform:translate(30px,-30px)} }
+    @keyframes floatA { 0%,100%{-webkit-transform:translate(0,0);transform:translate(0,0)} 50%{-webkit-transform:translate(30px,-30px);transform:translate(30px,-30px)} }
+    @-webkit-keyframes floatB { 0%,100%{-webkit-transform:translate(0,0);transform:translate(0,0)} 50%{-webkit-transform:translate(-20px,20px);transform:translate(-20px,20px)} }
+    @keyframes floatB { 0%,100%{-webkit-transform:translate(0,0);transform:translate(0,0)} 50%{-webkit-transform:translate(-20px,20px);transform:translate(-20px,20px)} }
+    @-webkit-keyframes pulse { 0%,100%{opacity:1;-webkit-transform:scale(1);transform:scale(1)} 50%{opacity:.5;-webkit-transform:scale(1.4);transform:scale(1.4)} }
+    @keyframes pulse { 0%,100%{opacity:1;-webkit-transform:scale(1);transform:scale(1)} 50%{opacity:.5;-webkit-transform:scale(1.4);transform:scale(1.4)} }
+    @-webkit-keyframes fadeUp { from{opacity:0;-webkit-transform:translateY(24px);transform:translateY(24px)} to{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)} }
+    @keyframes fadeUp { from{opacity:0;-webkit-transform:translateY(24px);transform:translateY(24px)} to{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)} }
+    @-webkit-keyframes fadeRight { from{opacity:0;-webkit-transform:translateX(40px);transform:translateX(40px)} to{opacity:1;-webkit-transform:translateX(0);transform:translateX(0)} }
+    @keyframes fadeRight { from{opacity:0;-webkit-transform:translateX(40px);transform:translateX(40px)} to{opacity:1;-webkit-transform:translateX(0);transform:translateX(0)} }
+    @-webkit-keyframes shimmer { 0%{background-position:-200% center} 100%{background-position:200% center} }
+    @keyframes shimmer { 0%{background-position:-200% center} 100%{background-position:200% center} }
+    @-webkit-keyframes spin { from{-webkit-transform:rotate(0deg);transform:rotate(0deg)} to{-webkit-transform:rotate(360deg);transform:rotate(360deg)} }
+    @keyframes spin { from{-webkit-transform:rotate(0deg);transform:rotate(0deg)} to{-webkit-transform:rotate(360deg);transform:rotate(360deg)} }
+    @-webkit-keyframes slideDown { from{opacity:0;-webkit-transform:translateY(-10px);transform:translateY(-10px)} to{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)} }
+    @keyframes slideDown { from{opacity:0;-webkit-transform:translateY(-10px);transform:translateY(-10px)} to{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)} }
+
+    /* ===== BLOBS ===== */
+    .blob { position: absolute; border-radius: 50%; -webkit-filter: blur(90px); filter: blur(90px); pointer-events: none; }
+    .b1 { width: 600px; height: 600px; background: radial-gradient(circle,rgba(108,99,255,.18),transparent 70%); top: -100px; right: -100px; -webkit-animation: floatA 8s ease-in-out infinite; animation: floatA 8s ease-in-out infinite; }
+    .b2 { width: 400px; height: 400px; background: radial-gradient(circle,rgba(255,101,132,.12),transparent 70%); bottom: 0; left: 5%; -webkit-animation: floatB 10s ease-in-out infinite; animation: floatB 10s ease-in-out infinite; }
+    .b3 { width: 300px; height: 300px; background: radial-gradient(circle,rgba(67,233,123,.1),transparent 70%); top: 40%; left: 40%; -webkit-animation: floatA 12s ease-in-out infinite reverse; animation: floatA 12s ease-in-out infinite reverse; }
+
+    /* ===== PROGRESS BAR ===== */
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: -webkit-linear-gradient(left,var(--accent),var(--accent2),var(--accent3)); background: linear-gradient(90deg,var(--accent),var(--accent2),var(--accent3)); z-index: 9997; width: 0%; -webkit-transition: width .1s linear; transition: width .1s linear; }
+
+    /* ===== NAV ===== */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      display: -webkit-flex; display: flex;
+      -webkit-align-items: center; align-items: center;
+      -webkit-justify-content: space-between; justify-content: space-between;
+      padding: 20px 6%;
+      background: rgba(10,10,15,.8);
+      -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+      -webkit-transition: padding .3s; transition: padding .3s;
+    }
+    nav.scrolled { padding: 13px 6%; }
+    .nav-logo {
+      font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.25rem;
+      background: -webkit-linear-gradient(135deg,var(--accent),var(--accent2));
+      background: linear-gradient(135deg,var(--accent),var(--accent2));
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: var(--accent);
+      text-decoration: none; letter-spacing: -1px;
+    }
+    .nav-links { display: -webkit-flex; display: flex; gap: 2.5rem; list-style: none; -webkit-align-items: center; align-items: center; }
+
+    /* Fallback for gap on flex in old Safari — use margin instead */
+    .nav-links > li + li { margin-left: 2.5rem; }
+    @supports (gap: 1rem) {
+      .nav-links > li + li { margin-left: 0; }
+    }
+
+    .nav-links a {
+      font-size: .85rem; font-weight: 500; color: var(--muted); text-decoration: none;
+      letter-spacing: .04em; text-transform: uppercase; position: relative;
+      -webkit-transition: color .2s; transition: color .2s; padding: 4px 0;
+    }
+    .nav-links a::after { content: ''; position: absolute; left: 0; bottom: -3px; width: 0; height: 1.5px; background: -webkit-linear-gradient(left,var(--accent),var(--accent2)); background: linear-gradient(90deg,var(--accent),var(--accent2)); -webkit-transition: width .3s; transition: width .3s; border-radius: 2px; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      padding: 9px 22px !important;
+      border: 1.5px solid var(--accent);
+      border-radius: 100px;
+      color: var(--accent) !important;
+      -webkit-transition: all .3s cubic-bezier(.4,0,.2,1) !important;
+      transition: all .3s cubic-bezier(.4,0,.2,1) !important;
+      background: transparent;
+    }
+    .nav-cta:hover { background: var(--accent) !important; color: #fff !important; -webkit-transform: translateY(-2px); transform: translateY(-2px); -webkit-box-shadow: 0 8px 24px var(--glow); box-shadow: 0 8px 24px var(--glow); }
+    .nav-cta::after { display: none !important; }
+    .hamburger { display: none; -webkit-flex-direction: column; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; -webkit-transition: all .3s cubic-bezier(.4,0,.2,1); transition: all .3s cubic-bezier(.4,0,.2,1); }
+    .hamburger.open span:nth-child(1) { -webkit-transform: rotate(45deg) translate(5px,5px); transform: rotate(45deg) translate(5px,5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { -webkit-transform: rotate(-45deg) translate(5px,-5px); transform: rotate(-45deg) translate(5px,-5px); }
+
+    /* ===== MOBILE NAV ===== */
+    @media (max-width: 768px) {
+      .hamburger { display: -webkit-flex; display: flex; }
+      .nav-links {
+        display: none; -webkit-flex-direction: column; flex-direction: column;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: rgba(18,18,26,.98);
+        -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border);
+        padding: 24px 6%;
+        -webkit-animation: slideDown .25s ease; animation: slideDown .25s ease;
+      }
+      .nav-links > li + li { margin-left: 0; margin-top: 20px; }
+      .nav-links.open { display: -webkit-flex; display: flex; }
+      .nav-links a { font-size: 1rem; }
+    }
+
+    /* ===== HERO ===== */
+    #hero { min-height: 100vh; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; padding: 120px 6% 80px; position: relative; overflow: hidden; }
+    .hero-inner {
+      display: -ms-grid; display: grid;
+      -ms-grid-columns: 1fr 60px 420px; grid-template-columns: 1fr 420px;
+      gap: 60px; -webkit-align-items: center; align-items: center;
+      width: 100%; max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;
+    }
+    .hero-tag {
+      display: -webkit-inline-flex; display: inline-flex;
+      -webkit-align-items: center; align-items: center;
+      gap: 8px; background: rgba(108,99,255,.12);
+      border: 1px solid var(--border); border-radius: 100px;
+      padding: 6px 16px; font-size: .78rem; font-weight: 600;
+      color: var(--accent); letter-spacing: .06em; text-transform: uppercase;
+      margin-bottom: 24px; opacity: 0;
+      -webkit-animation: fadeUp .8s .2s forwards; animation: fadeUp .8s .2s forwards;
+    }
+    .hero-tag .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent3); display: inline-block; -webkit-animation: pulse 1.5s infinite; animation: pulse 1.5s infinite; }
+
+    /* clamp() fallback: use a safe static size first, then override with clamp if supported */
+    .hero-name { font-family: 'Syne', sans-serif; font-size: 4rem; font-size: clamp(2.8rem,6vw,5.5rem); font-weight: 800; line-height: 1; letter-spacing: -2px; opacity: 0; -webkit-animation: fadeUp .8s .35s forwards; animation: fadeUp .8s .35s forwards; }
+    .hero-name .l1 { display: block; color: var(--text); }
+    .hero-name .l2 { display: block; background: -webkit-linear-gradient(135deg,var(--accent),var(--accent2)); background: linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--accent); }
+
+    .hero-role { margin-top: 16px; font-size: 1.05rem; font-weight: 300; color: var(--muted); opacity: 0; -webkit-animation: fadeUp .8s .5s forwards; animation: fadeUp .8s .5s forwards; line-height: 1.6; }
+    .hero-role strong { color: var(--text); font-weight: 500; }
+    .hero-desc { margin-top: 20px; font-size: .97rem; line-height: 1.78; color: var(--muted); max-width: 520px; opacity: 0; -webkit-animation: fadeUp .8s .65s forwards; animation: fadeUp .8s .65s forwards; }
+
+    .hero-btns { margin-top: 36px; display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; gap: 16px; opacity: 0; -webkit-animation: fadeUp .8s .8s forwards; animation: fadeUp .8s .8s forwards; }
+    .hero-btns > * + * { margin-left: 16px; }
+    @supports (gap: 1rem) { .hero-btns > * + * { margin-left: 0; } }
+
+    .btn-p {
+      padding: 14px 32px; background: -webkit-linear-gradient(135deg,var(--accent),#9b59b6); background: linear-gradient(135deg,var(--accent),#9b59b6);
+      border: none; border-radius: 100px; color: #fff; font-size: .92rem; font-weight: 500;
+      text-decoration: none; -webkit-transition: all .3s cubic-bezier(.4,0,.2,1); transition: all .3s cubic-bezier(.4,0,.2,1);
+      -webkit-box-shadow: 0 8px 30px rgba(108,99,255,.35); box-shadow: 0 8px 30px rgba(108,99,255,.35);
+      display: -webkit-inline-flex; display: inline-flex; -webkit-align-items: center; align-items: center; gap: 8px;
+      font-family: 'DM Sans', sans-serif; cursor: pointer; position: relative; overflow: hidden;
+    }
+    .btn-p::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: -webkit-linear-gradient(135deg,rgba(255,255,255,.15),transparent); background: linear-gradient(135deg,rgba(255,255,255,.15),transparent); opacity: 0; -webkit-transition: opacity .3s; transition: opacity .3s; }
+    .btn-p:hover { -webkit-transform: translateY(-3px); transform: translateY(-3px); -webkit-box-shadow: 0 14px 40px rgba(108,99,255,.5); box-shadow: 0 14px 40px rgba(108,99,255,.5); }
+    .btn-p:hover::before { opacity: 1; }
+    .btn-s {
+      padding: 14px 32px; background: transparent; border: 1.5px solid var(--border);
+      border-radius: 100px; color: var(--text); font-size: .92rem; font-weight: 500;
+      text-decoration: none; -webkit-transition: all .3s cubic-bezier(.4,0,.2,1); transition: all .3s cubic-bezier(.4,0,.2,1);
+      display: -webkit-inline-flex; display: inline-flex; -webkit-align-items: center; align-items: center; gap: 8px;
+      font-family: 'DM Sans', sans-serif; cursor: pointer;
+    }
+    .btn-s:hover { border-color: var(--accent); color: var(--accent); -webkit-transform: translateY(-3px); transform: translateY(-3px); }
+
+    .hero-stats { margin-top: 48px; display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; gap: 36px; opacity: 0; -webkit-animation: fadeUp .8s .95s forwards; animation: fadeUp .8s .95s forwards; }
+    .hero-stats > * + * { margin-left: 36px; }
+    @supports (gap: 1rem) { .hero-stats > * + * { margin-left: 0; } }
+    .stat-num { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 700; background: -webkit-linear-gradient(135deg,var(--accent),var(--accent2)); background: linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--accent); }
+    .stat-label { font-size: .74rem; color: var(--muted); margin-top: 2px; text-transform: uppercase; letter-spacing: .1em; }
+
+    /* ===== HERO CARD ===== */
+    .hero-img-wrap { position: relative; opacity: 0; -webkit-animation: fadeRight .9s .4s forwards; animation: fadeRight .9s .4s forwards; }
+    .hero-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
+      padding: 28px; position: relative; overflow: hidden;
+    }
+    .hero-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: -webkit-linear-gradient(135deg,rgba(108,99,255,.08),transparent 60%); background: linear-gradient(135deg,rgba(108,99,255,.08),transparent 60%); pointer-events: none; }
+
+    /* aspect-ratio fallback for Safari < 15 */
+    .hero-photo-wrap { width: 100%; position: relative; padding-bottom: 100%; overflow: hidden; border-radius: var(--radius-md); }
+    .hero-photo {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      -o-object-fit: cover; object-fit: cover;
+      -o-object-position: top center; object-position: top center;
+      display: block; -webkit-filter: grayscale(10%); filter: grayscale(10%);
+      -webkit-transition: -webkit-filter .4s; transition: -webkit-filter .4s; transition: filter .4s; transition: filter .4s, -webkit-filter .4s;
+    }
+    .hero-photo:hover { -webkit-filter: grayscale(0%); filter: grayscale(0%); }
+
+    .hero-badge {
+      position: absolute; bottom: 36px; left: 16px; right: 16px;
+      background: rgba(10,10,15,.85);
+      -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+      border: 1px solid var(--border); border-radius: var(--radius-sm);
+      padding: 14px 18px; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; gap: 12px;
+    }
+    .badge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent3); -webkit-animation: pulse 1.5s infinite; animation: pulse 1.5s infinite; -webkit-flex-shrink: 0; flex-shrink: 0; }
+    .badge-txt { font-size: .78rem; color: var(--muted); }
+    .badge-txt strong { color: var(--text); display: block; font-size: .86rem; }
+
+    .chip { position: absolute; background: var(--surface2); border: 1px solid var(--border); border-radius: 100px; padding: 6px 14px; font-size: .72rem; font-weight: 600; color: var(--muted); white-space: nowrap; }
+    .chip1 { top: -14px; right: 30px; -webkit-animation: floatA 5s ease-in-out infinite; animation: floatA 5s ease-in-out infinite; }
+    .chip2 { top: 30%; left: -50px; -webkit-animation: floatB 6s ease-in-out infinite; animation: floatB 6s ease-in-out infinite; }
+    .chip3 { bottom: 80px; right: -40px; -webkit-animation: floatA 7s ease-in-out infinite 1s; animation: floatA 7s ease-in-out infinite 1s; }
+
+    /* ===== SECTIONS ===== */
+    section { padding: 100px 6%; position: relative; z-index: 1; }
+    .inner { max-width: 1200px; margin: 0 auto; }
+    .sec-label { font-size: .72rem; font-weight: 700; color: var(--accent); letter-spacing: .18em; text-transform: uppercase; margin-bottom: 12px; }
+    .sec-title { font-family: 'Syne', sans-serif; font-size: 2.5rem; font-size: clamp(1.9rem,4vw,3rem); font-weight: 700; letter-spacing: -1px; line-height: 1.1; color: var(--text); }
+    .sec-title span { background: -webkit-linear-gradient(135deg,var(--accent),var(--accent2)); background: linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--accent); }
+    .divider { width: 48px; height: 3px; background: -webkit-linear-gradient(left,var(--accent),var(--accent2)); background: linear-gradient(90deg,var(--accent),var(--accent2)); border-radius: 2px; margin: 20px 0 48px; }
+
+    /* ===== ABOUT ===== */
+    #about { background: var(--surface); }
+    #about::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 1px; background: -webkit-linear-gradient(left,transparent,var(--accent),transparent); background: linear-gradient(90deg,transparent,var(--accent),transparent); }
+    .about-grid { display: -ms-grid; display: grid; -ms-grid-columns: 1fr 64px 1fr; grid-template-columns: 1fr 1fr; gap: 64px; -webkit-align-items: start; align-items: start; }
+    .about-text p { font-size: .97rem; line-height: 1.85; color: var(--muted); margin-bottom: 18px; }
+    .about-text p strong { color: var(--text); font-weight: 500; }
+
+    .skills-grid { display: -ms-grid; display: grid; -ms-grid-columns: 1fr 14px 1fr; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 32px; }
+    .skill-tag {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm);
+      padding: 11px 14px; font-size: .82rem; font-weight: 500; color: var(--muted);
+      display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; gap: 8px;
+      -webkit-transition: all .3s cubic-bezier(.4,0,.2,1); transition: all .3s cubic-bezier(.4,0,.2,1); cursor: default;
+    }
+    .skill-tag:hover { border-color: var(--accent); color: var(--text); -webkit-transform: translateY(-2px); transform: translateY(-2px); background: rgba(108,99,255,.06); }
+
+    .exp-item { display: -webkit-flex; display: flex; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--border2); }
+    .exp-item:last-child { border-bottom: none; }
+    .exp-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--accent); -webkit-flex-shrink: 0; flex-shrink: 0; margin-top: 5px; -webkit-box-shadow: 0 0 10px var(--glow); box-shadow: 0 0 10px var(--glow); }
+    .exp-role { font-family: 'Syne', sans-serif; font-size: .95rem; font-weight: 600; color: var(--text); }
+    .exp-co { font-size: .82rem; color: var(--accent); margin-top: 3px; }
+    .exp-period { font-size: .76rem; color: var(--muted); margin-top: 4px; }
+
+    /* ===== PROJECTS ===== */
+    #projects { background: var(--bg); }
+    .projects-grid { display: -ms-grid; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 22px; }
+    .pcard {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
+      padding: 30px; position: relative; overflow: hidden;
+      -webkit-transition: all .3s cubic-bezier(.4,0,.2,1); transition: all .3s cubic-bezier(.4,0,.2,1);
+    }
+    .pcard::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: -webkit-linear-gradient(135deg,rgba(108,99,255,.05),transparent); background: linear-gradient(135deg,rgba(108,99,255,.05),transparent); opacity: 0; -webkit-transition: opacity .35s; transition: opacity .35s; }
+    .pcard:hover { -webkit-transform: translateY(-6px); transform: translateY(-6px); border-color: rgba(108,99,255,.4); -webkit-box-shadow: 0 20px 60px rgba(0,0,0,.4); box-shadow: 0 20px 60px rgba(0,0,0,.4); }
+    .pcard:hover::before { opacity: 1; }
+    .pnum { font-family: 'Syne', sans-serif; font-size: 3rem; font-weight: 800; color: rgba(108,99,255,.1); position: absolute; top: 20px; right: 26px; line-height: 1; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+    .ptags { display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+    .ptags > * + * { margin-left: 8px; }
+    @supports (gap: 1rem) { .ptags > * + * { margin-left: 0; } }
+    .ptag { font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 4px 12px; border-radius: 100px; border: 1px solid; }
+    .ptag.an { color: var(--accent); border-color: rgba(108,99,255,.3); background: rgba(108,99,255,.08); }
+    .ptag.mk { color: var(--accent2); border-color: rgba(255,101,132,.3); background: rgba(255,101,132,.08); }
+    .ptag.se { color: var(--accent3); border-color: rgba(67,233,123,.3); background: rgba(67,233,123,.08); }
+    .ptag.au { color: var(--accent4); border-color: rgba(249,202,36,.3); background: rgba(249,202,36,.08); }
+    .ptitle { font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--text); margin-bottom: 12px; }
+    .pdesc { font-size: .9rem; line-height: 1.72; color: var(--muted); margin-bottom: 24px; }
+    .pmets { display: -webkit-flex; display: flex; gap: 20px; padding-top: 20px; border-top: 1px solid var(--border2); -webkit-flex-wrap: wrap; flex-wrap: wrap; }
+    .pmets > * + * { margin-left: 20px; }
+    @supports (gap: 1rem) { .pmets > * + * { margin-left: 0; } }
+    .mv { font-family: 'Syne', sans-serif; font-size: 1.35rem; font-weight: 700; background: -webkit-linear-gradient(135deg,var(--accent),var(--accent2)); background: linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--accent); }
+    .ml { font-size: .7rem; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-top: 2px; }
+
+    /* ===== CERTIFICATIONS ===== */
+    #certifications { background: var(--surface); }
+    #certifications::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 1px; background: -webkit-linear-gradient(left,transparent,var(--accent2),transparent); background: linear-gradient(90deg,transparent,var(--accent2),transparent); }
+    .certs-grid { display: -ms-grid; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
+    .ccard {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md);
+      padding: 24px; -webkit-transition: all .3s cubic-bezier(.4,0,.2,1); transition: all .3s cubic-bezier(.4,0,.2,1);
+    }
+    .ccard:hover { border-color: var(--accent2); -webkit-transform: translateY(-4px); transform: translateY(-4px); -webkit-box-shadow: 0 12px 40px var(--glow2); box-shadow: 0 12px 40px var(--glow2); }
+    .cicon { font-size: 2rem; margin-bottom: 14px; display: block; }
+    .cname { font-family: 'Syne', sans-serif; font-size: .93rem; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .ciss { font-size: .8rem; color: var(--accent2); font-weight: 500; }
+
+    /* ===== CONTACT SECTION ===== */
+    #contact { background: var(--bg); }
+    #contact::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 1px; background: -webkit-linear-gradient(left,transparent,var(--accent3),transparent); background: linear-gradient(90deg,transparent,var(--accent3),transparent); }
+    .contact-grid { display: -ms-grid; display: grid; -ms-grid-columns: 1fr 60px 1fr; grid-template-columns: 1fr 1fr; gap: 60px; -webkit-align-items: start; align-items: start; }
+    .contact-info h3 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--text); margin-bottom: 16px; }
+    .contact-info p { font-size: .96rem; line-height: 1.78; color: var(--muted); margin-bottom: 32px; }
+    .contact-links { display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; gap: 14px; }
+    .contact-links > * + * { margin-top: 14px; }
+    @supports (gap: 1rem) { .contact-links > * + * { margin-top: 0; } }
+    .contact-link {
+      display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; gap: 14px;
+      padding: 14px 18px; background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); text-decoration: none; color: var(--text);
+      -webkit-transition: all .3s cubic-bezier(.4,0,.2,1); transition: all .3s cubic-bezier(.4,0,.2,1);
+    }
+    .contact-link:hover { border-color: var(--accent); -webkit-transform: translateX(6px); transform: translateX(6px); background: rgba(108,99,255,.06); }
+    .contact-link .cl-icon { font-size: 1.2rem; width: 36px; height: 36px; background: rgba(108,99,255,.12); border-radius: 10px; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; -webkit-justify-content: center; justify-content: center; -webkit-flex-shrink: 0; flex-shrink: 0; }
+    .contact-link .cl-text { font-size: .85rem; }
+    .contact-link .cl-label { font-size: .7rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 2px; }
+
+    /* ===== CONTACT FORM ===== */
+    .contact-form-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 36px; }
+    .form-group { margin-bottom: 20px; }
+    .form-row { display: -ms-grid; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+    .form-label { display: block; font-size: .78rem; font-weight: 600; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; }
+    .form-input, .form-textarea, .form-select {
+      width: 100%; padding: 13px 16px;
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); color: var(--text);
+      font-family: 'DM Sans', sans-serif; font-size: .93rem;
+      -webkit-transition: all .3s cubic-bezier(.4,0,.2,1); transition: all .3s cubic-bezier(.4,0,.2,1);
+      outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none;
+    }
+    .form-input:focus, .form-textarea:focus, .form-select:focus { border-color: var(--accent); -webkit-box-shadow: 0 0 0 3px rgba(108,99,255,.15); box-shadow: 0 0 0 3px rgba(108,99,255,.15); background: rgba(108,99,255,.04); }
+    .form-input::-webkit-input-placeholder, .form-textarea::-webkit-input-placeholder { color: rgba(136,136,168,.5); }
+    .form-input::-moz-placeholder, .form-textarea::-moz-placeholder { color: rgba(136,136,168,.5); opacity: 1; }
+    .form-input:-ms-input-placeholder, .form-textarea:-ms-input-placeholder { color: rgba(136,136,168,.5); }
+    .form-input::placeholder, .form-textarea::placeholder { color: rgba(136,136,168,.5); }
+    .form-textarea { resize: vertical; min-height: 130px; line-height: 1.6; }
+    .form-select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238888a8' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px; }
+    .form-select option { background: var(--surface2); color: var(--text); }
+
+    .form-submit {
+      width: 100%; padding: 15px; background: -webkit-linear-gradient(135deg,var(--accent),#9b59b6); background: linear-gradient(135deg,var(--accent),#9b59b6);
+      border: none; border-radius: 100px; color: #fff; font-size: .95rem; font-weight: 600;
+      font-family: 'DM Sans', sans-serif; cursor: pointer;
+      -webkit-transition: all .3s cubic-bezier(.4,0,.2,1); transition: all .3s cubic-bezier(.4,0,.2,1);
+      -webkit-box-shadow: 0 8px 30px rgba(108,99,255,.35); box-shadow: 0 8px 30px rgba(108,99,255,.35);
+      display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center;
+      -webkit-justify-content: center; justify-content: center; gap: 10px;
+      position: relative; overflow: hidden;
+    }
+    .form-submit:hover { -webkit-transform: translateY(-2px); transform: translateY(-2px); -webkit-box-shadow: 0 14px 40px rgba(108,99,255,.5); box-shadow: 0 14px 40px rgba(108,99,255,.5); }
+    .form-submit:active { -webkit-transform: translateY(0); transform: translateY(0); }
+    .form-submit .spinner { width: 18px; height: 18px; border: 2px solid rgba(255,255,255,.3); border-top-color: #fff; border-radius: 50%; -webkit-animation: spin .7s linear infinite; animation: spin .7s linear infinite; display: none; }
+    .form-submit.loading .btn-text { display: none; }
+    .form-submit.loading .spinner { display: block; }
+
+    /* Form Success/Error States */
+    .form-status { margin-top: 16px; padding: 14px 18px; border-radius: var(--radius-sm); font-size: .88rem; font-weight: 500; display: none; -webkit-align-items: center; align-items: center; gap: 10px; }
+    .form-status.success { background: rgba(67,233,123,.1); border: 1px solid rgba(67,233,123,.3); color: var(--accent3); display: -webkit-flex; display: flex; }
+    .form-status.error { background: rgba(255,101,132,.1); border: 1px solid rgba(255,101,132,.3); color: var(--accent2); display: -webkit-flex; display: flex; }
+
+    /* Char Counter */
+    .char-counter { font-size: .72rem; color: var(--muted); text-align: right; margin-top: 4px; -webkit-transition: color .2s; transition: color .2s; }
+    .char-counter.warn { color: var(--accent4); }
+    .char-counter.over { color: var(--accent2); }
+
+    /* ===== CTA ===== */
+    #cta { background: var(--surface); }
+    #cta::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 1px; background: -webkit-linear-gradient(left,transparent,var(--accent),transparent); background: linear-gradient(90deg,transparent,var(--accent),transparent); }
+    .cta-box {
+      background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-lg);
+      padding: 64px; text-align: center; position: relative; overflow: hidden;
+    }
+    .cta-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at center,rgba(108,99,255,.1),transparent 70%); pointer-events: none; }
+    .cta-box h2 { font-family: 'Syne', sans-serif; font-size: 2.3rem; font-size: clamp(1.8rem,3.5vw,2.8rem); font-weight: 700; color: var(--text); letter-spacing: -1px; margin-bottom: 16px; }
+    .cta-box h2 span { background: -webkit-linear-gradient(135deg,var(--accent),var(--accent2)); background: linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--accent); }
+    .cta-box p { font-size: 1rem; color: var(--muted); max-width: 520px; margin: 0 auto 36px; line-height: 1.75; }
+    .cta-btns { display: -webkit-flex; display: flex; gap: 16px; -webkit-justify-content: center; justify-content: center; -webkit-flex-wrap: wrap; flex-wrap: wrap; }
+    .cta-btns > * + * { margin-left: 16px; }
+    @supports (gap: 1rem) { .cta-btns > * + * { margin-left: 0; } }
+    .qlinks { display: -webkit-flex; display: flex; gap: 16px; -webkit-justify-content: center; justify-content: center; margin-top: 28px; -webkit-flex-wrap: wrap; flex-wrap: wrap; }
+    .qlinks > * + * { margin-left: 16px; }
+    @supports (gap: 1rem) { .qlinks > * + * { margin-left: 0; } }
+    .qlink {
+      display: -webkit-inline-flex; display: inline-flex; -webkit-align-items: center; align-items: center;
+      gap: 8px; padding: 10px 20px; background: var(--bg); border: 1px solid var(--border);
+      border-radius: 100px; font-size: .84rem; color: var(--muted); text-decoration: none;
+      -webkit-transition: all .3s cubic-bezier(.4,0,.2,1); transition: all .3s cubic-bezier(.4,0,.2,1); font-weight: 500;
+    }
+    .qlink:hover { border-color: var(--accent); color: var(--text); -webkit-transform: translateY(-2px); transform: translateY(-2px); }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--surface); border-top: 1px solid var(--border); padding: 40px 6%; position: relative; z-index: 1; }
+    .foot-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: -webkit-flex; display: flex;
+      -webkit-align-items: center; align-items: center;
+      -webkit-justify-content: space-between; justify-content: space-between;
+      -webkit-flex-wrap: wrap; flex-wrap: wrap; gap: 20px;
+    }
+    .foot-inner > * + * { margin-left: 20px; }
+    @supports (gap: 1rem) { .foot-inner > * + * { margin-left: 0; } }
+    .foot-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; background: -webkit-linear-gradient(135deg,var(--accent),var(--accent2)); background: linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--accent); }
+    .foot-links { display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; gap: 24px; }
+    .foot-links > * + * { margin-left: 24px; }
+    @supports (gap: 1rem) { .foot-links > * + * { margin-left: 0; } }
+    .foot-links a { font-size: .84rem; color: var(--muted); text-decoration: none; -webkit-transition: color .2s; transition: color .2s; }
+    .foot-links a:hover { color: var(--text); }
+    .foot-copy { font-size: .8rem; color: var(--muted); }
+    .foot-social { display: -webkit-flex; display: flex; gap: 10px; }
+    .foot-social > * + * { margin-left: 10px; }
+    @supports (gap: 1rem) { .foot-social > * + * { margin-left: 0; } }
+    .sbtn {
+      width: 36px; height: 36px; border: 1px solid var(--border); border-radius: 10px;
+      display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center;
+      -webkit-justify-content: center; justify-content: center;
+      font-size: .9rem; text-decoration: none; -webkit-transition: all .3s cubic-bezier(.4,0,.2,1); transition: all .3s cubic-bezier(.4,0,.2,1);
+      color: var(--muted);
+    }
+    .sbtn:hover { border-color: var(--accent); -webkit-transform: translateY(-2px); transform: translateY(-2px); color: var(--text); background: rgba(108,99,255,.1); }
+
+    /* ===== THEME TOGGLE ===== */
+    .theme-toggle {
+      position: fixed; bottom: 28px; right: 28px; z-index: 900;
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--surface2); border: 1px solid var(--border);
+      display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center;
+      -webkit-justify-content: center; justify-content: center;
+      cursor: pointer; font-size: 1.2rem;
+      -webkit-transition: all .3s cubic-bezier(.4,0,.2,1); transition: all .3s cubic-bezier(.4,0,.2,1);
+      -webkit-box-shadow: 0 4px 20px rgba(0,0,0,.3); box-shadow: 0 4px 20px rgba(0,0,0,.3);
+    }
+    .theme-toggle:hover { border-color: var(--accent); -webkit-transform: scale(1.1); transform: scale(1.1); }
+
+    /* ===== LIGHT THEME ===== */
+    body.light {
+      --bg: #f4f4f8; --surface: #ffffff; --surface2: #eeeef6; --surface3: #e8e8f2;
+      --text: #1a1a2e; --muted: #5a5a78; --border: rgba(108,99,255,.2); --border2: rgba(108,99,255,.1);
+      --glow: rgba(108,99,255,.2);
+    }
+    body.light::before { opacity: .12; }
+    body.light .hero-card { -webkit-box-shadow: 0 12px 50px rgba(0,0,0,.08); box-shadow: 0 12px 50px rgba(0,0,0,.08); }
+    body.light .form-input, body.light .form-textarea, body.light .form-select { background: #f8f8fc; }
+    body.light .pcard, body.light .ccard { -webkit-box-shadow: 0 2px 20px rgba(0,0,0,.06); box-shadow: 0 2px 20px rgba(0,0,0,.06); }
+
+    /* ===== SCROLL TO TOP ===== */
+    .scroll-top {
+      position: fixed; bottom: 28px; left: 28px; z-index: 900;
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--accent); border: none; color: #fff;
+      display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center;
+      -webkit-justify-content: center; justify-content: center;
+      cursor: pointer; font-size: 1.1rem;
+      -webkit-transition: all .3s cubic-bezier(.4,0,.2,1); transition: all .3s cubic-bezier(.4,0,.2,1);
+      -webkit-box-shadow: 0 4px 20px var(--glow); box-shadow: 0 4px 20px var(--glow);
+      opacity: 0; pointer-events: none;
+    }
+    .scroll-top.visible { opacity: 1; pointer-events: auto; }
+    .scroll-top:hover { -webkit-transform: translateY(-3px) scale(1.1); transform: translateY(-3px) scale(1.1); }
+
+    /* ===== REVEAL ===== */
+    .reveal { opacity: 0; -webkit-transform: translateY(28px); transform: translateY(28px); -webkit-transition: opacity .7s cubic-bezier(.4,0,.2,1), -webkit-transform .7s cubic-bezier(.4,0,.2,1); transition: opacity .7s cubic-bezier(.4,0,.2,1), -webkit-transform .7s cubic-bezier(.4,0,.2,1); transition: opacity .7s cubic-bezier(.4,0,.2,1), transform .7s cubic-bezier(.4,0,.2,1); transition: opacity .7s cubic-bezier(.4,0,.2,1), transform .7s cubic-bezier(.4,0,.2,1), -webkit-transform .7s cubic-bezier(.4,0,.2,1); }
+    .reveal.visible { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); }
+
+    /* ===== TOOLTIP ===== */
+    [data-tooltip] { position: relative; }
+    [data-tooltip]::after { content: attr(data-tooltip); position: absolute; bottom: calc(100% + 8px); left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 6px 12px; font-size: .75rem; color: var(--text); white-space: nowrap; opacity: 0; pointer-events: none; -webkit-transition: opacity .2s; transition: opacity .2s; z-index: 100; }
+    [data-tooltip]:hover::after { opacity: 1; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 960px) {
+      .hero-inner { -ms-grid-columns: 1fr; grid-template-columns: 1fr; }
+      .hero-img-wrap { display: none; }
+      .about-grid { -ms-grid-columns: 1fr; grid-template-columns: 1fr; gap: 40px; }
+      .contact-grid { -ms-grid-columns: 1fr; grid-template-columns: 1fr; gap: 40px; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 70px 5%; }
+      .hero-stats { gap: 24px; }
+      .cta-box { padding: 36px 24px; }
+      .foot-inner { -webkit-flex-direction: column; flex-direction: column; text-align: center; }
+      .foot-inner > * + * { margin-left: 0; margin-top: 16px; }
+      .foot-links { -webkit-justify-content: center; justify-content: center; }
+      .foot-social { -webkit-justify-content: center; justify-content: center; }
+      .form-row { -ms-grid-columns: 1fr; grid-template-columns: 1fr; }
+      .scroll-top, .theme-toggle { bottom: 16px; }
+      .scroll-top { left: 16px; }
+      .theme-toggle { right: 16px; }
+    }
+
+    /* ===== FLOATING CONTACT BUTTONS ===== */
+    @-webkit-keyframes floatContact { 0%,100%{-webkit-transform:translateY(0);transform:translateY(0)} 50%{-webkit-transform:translateY(-6px);transform:translateY(-6px)} }
+    @keyframes floatContact { 0%,100%{-webkit-transform:translateY(0);transform:translateY(0)} 50%{-webkit-transform:translateY(-6px);transform:translateY(-6px)} }
+    @-webkit-keyframes ripple { 0%{-webkit-transform:scale(1);transform:scale(1);opacity:.6} 100%{-webkit-transform:scale(2.2);transform:scale(2.2);opacity:0} }
+    @keyframes ripple { 0%{-webkit-transform:scale(1);transform:scale(1);opacity:.6} 100%{-webkit-transform:scale(2.2);transform:scale(2.2);opacity:0} }
+
+    .float-contact-wrap {
+      position: fixed;
+      right: 28px;
+      bottom: 92px; /* sits above theme toggle */
+      z-index: 900;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      -webkit-align-items: center;
+      align-items: center;
+      gap: 12px;
+    }
+    .float-contact-wrap > * + * { margin-top: 12px; }
+    @supports (gap: 1rem) { .float-contact-wrap > * + * { margin-top: 0; } }
+
+    /* Shared button style */
+    .fc-btn {
+      position: relative;
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      border: none;
+      display: -webkit-flex; display: flex;
+      -webkit-align-items: center; align-items: center;
+      -webkit-justify-content: center; justify-content: center;
+      text-decoration: none;
+      cursor: pointer;
+      -webkit-transition: -webkit-transform .3s cubic-bezier(.4,0,.2,1), -webkit-box-shadow .3s cubic-bezier(.4,0,.2,1); transition: -webkit-transform .3s cubic-bezier(.4,0,.2,1), -webkit-box-shadow .3s cubic-bezier(.4,0,.2,1); transition: transform .3s cubic-bezier(.4,0,.2,1), box-shadow .3s cubic-bezier(.4,0,.2,1); transition: transform .3s cubic-bezier(.4,0,.2,1), box-shadow .3s cubic-bezier(.4,0,.2,1), -webkit-transform .3s cubic-bezier(.4,0,.2,1), -webkit-box-shadow .3s cubic-bezier(.4,0,.2,1);
+      -webkit-animation: floatContact 3s ease-in-out infinite; animation: floatContact 3s ease-in-out infinite;
+      overflow: visible;
+    }
+    .fc-btn:nth-child(2) { -webkit-animation-delay: .4s; animation-delay: .4s; }
+
+    /* Ripple ring */
+    .fc-btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      opacity: 0;
+    }
+    .fc-btn:hover::before {
+      -webkit-animation: ripple .7s ease-out forwards; animation: ripple .7s ease-out forwards;
+    }
+    .fc-btn:hover {
+      -webkit-transform: scale(1.15) translateY(-3px); transform: scale(1.15) translateY(-3px);
+      -webkit-animation-play-state: paused; animation-play-state: paused;
+    }
+
+    /* SVG icon inside */
+    .fc-btn svg { width: 26px; height: 26px; position: relative; z-index: 1; }
+
+    /* WhatsApp button */
+    .fc-wa {
+      background: #25d366;
+      -webkit-box-shadow: 0 6px 24px rgba(37,211,102,.45); box-shadow: 0 6px 24px rgba(37,211,102,.45);
+    }
+    .fc-wa::before { background: rgba(37,211,102,.4); }
+    .fc-wa:hover { -webkit-box-shadow: 0 10px 32px rgba(37,211,102,.65); box-shadow: 0 10px 32px rgba(37,211,102,.65); }
+
+    /* Call button */
+    .fc-call {
+      background: -webkit-linear-gradient(135deg,#6c63ff,#9b59b6); background: linear-gradient(135deg,#6c63ff,#9b59b6);
+      -webkit-box-shadow: 0 6px 24px rgba(108,99,255,.45); box-shadow: 0 6px 24px rgba(108,99,255,.45);
+    }
+    .fc-call::before { background: rgba(108,99,255,.4); }
+    .fc-call:hover { -webkit-box-shadow: 0 10px 32px rgba(108,99,255,.65); box-shadow: 0 10px 32px rgba(108,99,255,.65); }
+
+    /* Tooltip label on the left */
+    .fc-btn .fc-label {
+      position: absolute;
+      right: calc(100% + 12px);
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 5px 12px;
+      font-size: .74rem;
+      font-weight: 600;
+      color: var(--text);
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      -webkit-transform: translateX(8px); transform: translateX(8px);
+      -webkit-transition: opacity .22s, -webkit-transform .22s; transition: opacity .22s, -webkit-transform .22s; transition: opacity .22s, transform .22s; transition: opacity .22s, transform .22s, -webkit-transform .22s;
+      -webkit-box-shadow: 0 4px 16px rgba(0,0,0,.25); box-shadow: 0 4px 16px rgba(0,0,0,.25);
+      font-family: 'DM Sans', sans-serif;
+      letter-spacing: .02em;
+    }
+    .fc-btn:hover .fc-label {
+      opacity: 1;
+      -webkit-transform: translateX(0); transform: translateX(0);
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      .float-contact-wrap { right: 16px; bottom: 80px; }
+      .fc-btn { width: 46px; height: 46px; }
+      .fc-btn svg { width: 22px; height: 22px; }
+      .fc-btn .fc-label { display: none; }
+    }
+
+    /* Print */
+    @media print {
+      .float-contact-wrap { display: none !important; }
+    }
+
+    /* ===== PRINT STYLES ===== */
+    @media print {
+      .cursor, .cursor-ring, .theme-toggle, .scroll-top, #progress-bar, nav { display: none !important; }
+      body { background: #fff; color: #000; }
+      section { padding: 40px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Custom Cursor (desktop only) -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Reading Progress Bar -->
+  <div id="progress-bar" role="progressbar" aria-label="Reading progress"></div>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">&#8593;</button>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" data-tooltip="Toggle light/dark">&#9788;</button>
+
+  <!-- ===== FLOATING CONTACT BUTTONS ===== -->
+  <div class="float-contact-wrap" aria-label="Quick contact buttons" role="complementary">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/918434218640" target="_blank" rel="noopener noreferrer"
+       class="fc-btn fc-wa" aria-label="Chat on WhatsApp">
+      <span class="fc-label">WhatsApp Me</span>
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M16 4.5C10.201 4.5 5.5 9.201 5.5 15c0 2.21.65 4.27 1.77 5.99L5.5 27.5l6.67-1.74A10.463 10.463 0 0016 26.5c5.799 0 10.5-4.701 10.5-10.5S21.799 4.5 16 4.5z" fill="white"/>
+        <path d="M21.5 18.9c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.15-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.78-1.68-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51H11.5c-.2 0-.52.07-.79.37-.27.3-1.03 1.01-1.03 2.46s1.06 2.85 1.2 3.05c.15.2 2.07 3.16 5.02 4.43.7.3 1.25.48 1.67.62.7.22 1.34.19 1.85.12.56-.09 1.75-.72 2-1.41.25-.22.49-.44.74-.56-.26.1-.84.36-2 1.41z" fill="#25d366"/>
+      </svg>
+    </a>
+    <!-- Call -->
+    <a href="tel:+918434218640" class="fc-btn fc-call" aria-label="Call Kuljeet">
+      <span class="fc-label">Call Me</span>
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M9.5 6h3.8l1.9 5-2.4 1.5a14.02 14.02 0 006.7 6.7l1.5-2.4 5 1.9v3.8C26 24.9 18 28 11 21S7.1 8.2 9.5 6z" fill="white" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- ===== NAV ===== -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo" aria-label="KKS Home">KKS.</a>
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <a href="mailto:Kuljeet3269@gmail.com" class="nav-cta" aria-label="Hire Kuljeet - Send Email">
+          Hire Me &#9993;
+        </a>
+      </li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" aria-label="Hero section">
+    <div class="blob b1" aria-hidden="true"></div>
+    <div class="blob b2" aria-hidden="true"></div>
+    <div class="blob b3" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div>
+        <div class="hero-tag" role="status"><span class="dot" aria-hidden="true"></span> Available for new opportunities</div>
+        <h1 class="hero-name">
+          <span class="l1">Kuljeet Kumar</span>
+          <span class="l2">Singh</span>
+        </h1>
+        <p class="hero-role"><strong>Data Analyst</strong> &middot; Digital Marketing Specialist &middot; Automation Expert</p>
+        <p class="hero-desc">Data-driven professional transforming raw data into actionable business insights. Expert in Looker Studio, Power BI, Google Sheets automation, SEO, and performance marketing.</p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn-p" aria-label="View my work">&#128202; View My Work</a>
+          <a href="#contact" class="btn-s" aria-label="Get in touch">Get in Touch &rarr;</a>
+        </div>
+        <div class="hero-stats" role="list" aria-label="Key statistics">
+          <div role="listitem"><div class="stat-num" aria-label="4 plus years experience">4+</div><div class="stat-label">Years Experience</div></div>
+          <div role="listitem"><div class="stat-num" aria-label="10 plus dashboards built">10+</div><div class="stat-label">Dashboards Built</div></div>
+          <div role="listitem"><div class="stat-num" aria-label="35 percent efficiency gains">35%</div><div class="stat-label">Efficiency Gains</div></div>
+        </div>
+      </div>
+      <div class="hero-img-wrap" aria-hidden="true">
+        <span class="chip chip1">&#128202; Looker Studio</span>
+        <span class="chip chip2">&#128269; SEO Expert</span>
+        <span class="chip chip3">&#9889; Automation</span>
+        <div class="hero-card">
+          <!-- aspect-ratio replaced with padding-bottom trick for Safari < 15 compatibility -->
+          <div class="hero-photo-wrap">
+            <img src="photo.jpg" alt="Kuljeet Kumar Singh" class="hero-photo" loading="eager"/>
+          </div>
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <div class="badge-txt"><strong>Currently at Horizon Kia</strong>Data Analyst &middot; Feb 2025 &ndash; Present</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" aria-label="About section">
+    <div class="inner">
+      <p class="sec-label reveal">About Me</p>
+      <h2 class="sec-title reveal">Turning <span>Data</span> into Growth Stories</h2>
+      <div class="divider reveal"></div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I'm <strong>Kuljeet Kumar Singh</strong>, a Data Analyst and Digital Marketing Specialist based in Ranchi, Jharkhand. With an MBA and hands-on experience across analytics, SEO, and automation, I bridge the gap between raw numbers and strategic business decisions.</p>
+          <p>At <strong>Horizon Kia</strong>, I design interactive Looker Studio dashboards and automated MIS reporting systems that have reduced manual effort by 35–40%. I analyze data from FMS, IMS, and PMS systems to monitor KPIs and empower management with actionable insights.</p>
+          <p>My background in digital marketing — including Google Ads, Facebook Ads, SEO, and conversion tracking — gives me a unique perspective combining analytical rigour with real-world marketing impact.</p>
+          <div style="margin-top:32px">
+            <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--text);margin-bottom:16px">Work Timeline</h3>
+            <div class="exp-item">
+              <div class="exp-dot"></div>
+              <div><div class="exp-role">Data Analyst</div><div class="exp-co">Horizon Kia</div><div class="exp-period">Feb 2025 – Present</div></div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot" style="background:var(--accent2);-webkit-box-shadow:0 0 10px rgba(255,101,132,.4);box-shadow:0 0 10px rgba(255,101,132,.4)"></div>
+              <div><div class="exp-role">Digital Marketing &amp; Website Manager</div><div class="exp-co">Hotel Genista Inn</div><div class="exp-period">Mar 2024 – Feb 2025</div></div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot" style="background:var(--accent3);-webkit-box-shadow:0 0 10px rgba(67,233,123,.4);box-shadow:0 0 10px rgba(67,233,123,.4)"></div>
+              <div><div class="exp-role">Digital Marketing Executive</div><div class="exp-co">Rahul Automobiles</div><div class="exp-period">Feb 2023 – Mar 2024</div></div>
+            </div>
+            <div class="exp-item">
+              <div class="exp-dot" style="background:var(--accent4);-webkit-box-shadow:0 0 10px rgba(249,202,36,.4);box-shadow:0 0 10px rgba(249,202,36,.4)"></div>
+              <div><div class="exp-role">Marketing Analyst Intern</div><div class="exp-co">Fundsroom</div><div class="exp-period">Dec 2023 – Feb 2024</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal" style="-webkit-transition-delay:.15s;transition-delay:.15s">
+          <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--text);margin-bottom:20px">Core Skills</h3>
+          <div class="skills-grid" role="list" aria-label="Skills">
+            <div class="skill-tag" role="listitem">&#128202; Looker Studio</div><div class="skill-tag" role="listitem">&#9889; Power BI</div>
+            <div class="skill-tag" role="listitem">&#128203; Google Sheets</div><div class="skill-tag" role="listitem">&#128269; SEO &amp; SEM</div>
+            <div class="skill-tag" role="listitem">&#127919; Google Ads</div><div class="skill-tag" role="listitem">&#128216; Facebook Ads</div>
+            <div class="skill-tag" role="listitem">&#127760; WordPress</div><div class="skill-tag" role="listitem">&#128279; API Integration</div>
+            <div class="skill-tag" role="listitem">&#128200; Google Analytics</div><div class="skill-tag" role="listitem">&#129302; Automation</div>
+            <div class="skill-tag" role="listitem">&#127912; Canva / Design</div><div class="skill-tag" role="listitem">&#129504; Business Intel</div>
+          </div>
+          <div style="background:var(--bg);border:1px solid var(--border);border-radius:18px;padding:24px">
+            <h3 style="font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:16px">&#127891; Education</h3>
+            <div style="margin-bottom:14px">
+              <div style="font-size:.88rem;font-weight:600;color:var(--text)">MBA – Marketing</div>
+              <div style="font-size:.78rem;color:var(--accent);margin-top:2px">Dr. Shyama Prasad Mukherjee University</div>
+              <div style="font-size:.75rem;color:var(--muted);margin-top:2px">2022 – 2024</div>
+            </div>
+            <div>
+              <div style="font-size:.88rem;font-weight:600;color:var(--text)">BBA – Business Administration</div>
+              <div style="font-size:.78rem;color:var(--accent);margin-top:2px">Doranda College, Ranchi University</div>
+              <div style="font-size:.75rem;color:var(--muted);margin-top:2px">2019 – 2022</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" aria-label="Projects section">
+    <div class="inner">
+      <p class="sec-label reveal">Featured Work</p>
+      <h2 class="sec-title reveal">Projects &amp; <span>Achievements</span></h2>
+      <div class="divider reveal"></div>
+      <div class="projects-grid">
+        <article class="pcard reveal" tabindex="0" aria-label="Project: Automotive KPI Dashboard Suite">
+          <div class="pnum" aria-hidden="true">01</div>
+          <div class="ptags"><span class="ptag an">Analytics</span><span class="ptag au">Automation</span></div>
+          <h3 class="ptitle">Automotive KPI Dashboard Suite</h3>
+          <p class="pdesc">Designed and maintained 10+ interactive Looker Studio dashboards for Horizon Kia's sales, service, and marketing teams. Integrated FMS, IMS, and PMS data into a unified management view.</p>
+          <div class="pmets"><div><div class="mv">10+</div><div class="ml">Dashboards</div></div><div><div class="mv">35%</div><div class="ml">Less Manual Work</div></div><div><div class="mv">3</div><div class="ml">Data Systems</div></div></div>
+        </article>
+        <article class="pcard reveal" style="-webkit-transition-delay:.1s;transition-delay:.1s" tabindex="0">
+          <div class="pnum" aria-hidden="true">02</div>
+          <div class="ptags"><span class="ptag mk">Marketing</span><span class="ptag se">SEO</span></div>
+          <h3 class="ptitle">Hotel Lead Generation &amp; SEO Strategy</h3>
+          <p class="pdesc">Led end-to-end digital marketing for Hotel Genista Inn. Managed Google and Facebook Ads with A/B testing and Google Analytics monitoring to improve lead quality and online visibility.</p>
+          <div class="pmets"><div><div class="mv">&uarr;ROI</div><div class="ml">Ad Performance</div></div><div><div class="mv">A/B</div><div class="ml">Testing Done</div></div><div><div class="mv">Full</div><div class="ml">Funnel Mgmt</div></div></div>
+        </article>
+        <article class="pcard reveal" style="-webkit-transition-delay:.2s;transition-delay:.2s" tabindex="0">
+          <div class="pnum" aria-hidden="true">03</div>
+          <div class="ptags"><span class="ptag au">Automation</span><span class="ptag an">Analytics</span></div>
+          <h3 class="ptitle">Automated MIS Reporting System</h3>
+          <p class="pdesc">Built a fully automated daily, weekly, and monthly MIS reporting system using Google Sheets. Workflow automation eliminated repetitive data entry and reduced reporting errors to zero.</p>
+          <div class="pmets"><div><div class="mv">3x</div><div class="ml">Report Types</div></div><div><div class="mv">Auto</div><div class="ml">Data Refresh</div></div><div><div class="mv">0</div><div class="ml">Manual Errors</div></div></div>
+        </article>
+        <article class="pcard reveal" style="-webkit-transition-delay:.3s;transition-delay:.3s" tabindex="0">
+          <div class="pnum" aria-hidden="true">04</div>
+          <div class="ptags"><span class="ptag mk">Marketing</span><span class="ptag an">Analytics</span></div>
+          <h3 class="ptitle">Multi-Brand Automobile Campaign</h3>
+          <p class="pdesc">Managed Facebook and Google Ads simultaneously for Rahul Hero and Victory Honda. Analyzed daily performance metrics and optimized campaigns in real-time for maximum lead quality.</p>
+          <div class="pmets"><div><div class="mv">2</div><div class="ml">Brands Managed</div></div><div><div class="mv">Daily</div><div class="ml">Optimization</div></div><div><div class="mv">&uarr;Leads</div><div class="ml">Quality Score</div></div></div>
+        </article>
+        <article class="pcard reveal" style="-webkit-transition-delay:.1s;transition-delay:.1s" tabindex="0">
+          <div class="pnum" aria-hidden="true">05</div>
+          <div class="ptags"><span class="ptag an">Analytics</span><span class="ptag se">Finance</span></div>
+          <h3 class="ptitle">Investment Analytics &amp; BI Dashboards</h3>
+          <p class="pdesc">As Marketing Analyst Intern at Fundsroom, created Power BI dashboards for investment analysis, opened Demat accounts, conducted competitive research, and tracked full ROI on campaigns.</p>
+          <div class="pmets"><div><div class="mv">BI</div><div class="ml">Dashboards</div></div><div><div class="mv">ROI</div><div class="ml">Tracking</div></div><div><div class="mv">Full</div><div class="ml">Analysis</div></div></div>
+        </article>
+        <article class="pcard reveal" style="-webkit-transition-delay:.2s;transition-delay:.2s" tabindex="0">
+          <div class="pnum" aria-hidden="true">06</div>
+          <div class="ptags"><span class="ptag se">SEO</span><span class="ptag mk">Freelance</span></div>
+          <h3 class="ptitle">Freelance SEO &amp; Digital Strategy</h3>
+          <p class="pdesc">Delivered end-to-end digital marketing as an independent consultant for multiple clients. Built SEO strategies, created performance dashboards, and drove organic traffic growth.</p>
+          <div class="pmets"><div><div class="mv">Multi</div><div class="ml">Clients Served</div></div><div><div class="mv">&uarr;Traffic</div><div class="ml">Organic Growth</div></div><div><div class="mv">Data</div><div class="ml">Driven Plans</div></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section id="certifications" aria-label="Certifications section">
+    <div class="inner">
+      <p class="sec-label reveal">Credentials</p>
+      <h2 class="sec-title reveal"><span>Certified</span> &amp; Qualified</h2>
+      <div class="divider reveal"></div>
+      <div class="certs-grid">
+        <div class="ccard reveal" tabindex="0"><div class="cicon" aria-hidden="true">&#128202;</div><div class="cname">Power BI &amp; Financial Modeling</div><div class="ciss">Fundsroom</div></div>
+        <div class="ccard reveal" style="-webkit-transition-delay:.1s;transition-delay:.1s" tabindex="0"><div class="cicon" aria-hidden="true">&#128185;</div><div class="cname">Financial Modeling</div><div class="ciss">Anudip Foundation</div></div>
+        <div class="ccard reveal" style="-webkit-transition-delay:.2s;transition-delay:.2s" tabindex="0"><div class="cicon" aria-hidden="true">&#127919;</div><div class="cname">Fundamentals of Digital Marketing</div><div class="ciss">Google</div></div>
+        <div class="ccard reveal" style="-webkit-transition-delay:.3s;transition-delay:.3s" tabindex="0"><div class="cicon" aria-hidden="true">&#128187;</div><div class="cname">Diploma in Computer Applications</div><div class="ciss">DCA Program</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" aria-label="Contact section">
+    <div class="inner">
+      <p class="sec-label reveal">Get In Touch</p>
+      <h2 class="sec-title reveal">Let's <span>Work Together</span></h2>
+      <div class="divider reveal"></div>
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info reveal">
+          <h3>Ready to collaborate?</h3>
+          <p>I'm open to Data Analyst roles, Digital Marketing opportunities, and freelance projects. Whether you need dashboards, automation, or a full-funnel marketing strategy — let's talk. Fill the form and I'll get back to you within 24 hours.</p>
+          <div class="contact-links" role="list">
+            <a href="mailto:Kuljeet3269@gmail.com" class="contact-link" aria-label="Send email to Kuljeet" role="listitem">
+              <span class="cl-icon" aria-hidden="true">&#9993;</span>
+              <div class="cl-text"><div class="cl-label">Email</div>Kuljeet3269@gmail.com</div>
+            </a>
+            <a href="https://wa.me/918434218640" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="WhatsApp Kuljeet" role="listitem">
+              <span class="cl-icon" aria-hidden="true">&#128241;</span>
+              <div class="cl-text"><div class="cl-label">WhatsApp</div>+91 84342 18640</div>
+            </a>
+            <a href="https://www.linkedin.com/in/kuljeet09" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="LinkedIn profile" role="listitem">
+              <span class="cl-icon" aria-hidden="true">&#128188;</span>
+              <div class="cl-text"><div class="cl-label">LinkedIn</div>linkedin.com/in/kuljeet09</div>
+            </a>
+            <a href="https://github.com/kuljeet3269-ctrl" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="GitHub profile" role="listitem">
+              <span class="cl-icon" aria-hidden="true">&#128049;</span>
+              <div class="cl-text"><div class="cl-label">GitHub</div>github.com/kuljeet3269-ctrl</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap reveal" style="-webkit-transition-delay:.15s;transition-delay:.15s">
+          <form id="contactForm" novalidate aria-label="Contact form">
+            <div class="form-row">
+              <div>
+                <label class="form-label" for="fname">First Name <span style="color:var(--accent2)">*</span></label>
+                <input class="form-input" type="text" id="fname" name="first_name" placeholder="Rahul" required autocomplete="given-name" aria-required="true"/>
+              </div>
+              <div>
+                <label class="form-label" for="lname">Last Name</label>
+                <input class="form-input" type="text" id="lname" name="last_name" placeholder="Sharma" autocomplete="family-name"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address <span style="color:var(--accent2)">*</span></label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="rahul@example.com" required autocomplete="email" aria-required="true"/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone Number</label>
+              <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel"/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="subject">I'm interested in <span style="color:var(--accent2)">*</span></label>
+              <select class="form-select" id="subject" name="subject" required aria-required="true">
+                <option value="" disabled selected>Select a topic...</option>
+                <option value="Data Analysis / Dashboard">&#128202; Data Analysis / Dashboard</option>
+                <option value="Digital Marketing">&#127919; Digital Marketing</option>
+                <option value="SEO / SEM">&#128269; SEO / SEM</option>
+                <option value="Automation / Google Sheets">&#9889; Automation / Google Sheets</option>
+                <option value="Freelance Project">&#128188; Freelance Project</option>
+                <option value="Full-time Opportunity">&#127970; Full-time Opportunity</option>
+                <option value="Other">&#128172; Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Your Message <span style="color:var(--accent2)">*</span></label>
+              <textarea class="form-textarea" id="message" name="message" placeholder="Tell me about your project, timeline, and what you're looking to achieve..." required maxlength="1000" aria-required="true" aria-describedby="charCount"></textarea>
+              <div class="char-counter" id="charCount" aria-live="polite">0 / 1000</div>
+            </div>
+            <button type="submit" class="form-submit" id="submitBtn" aria-label="Send message">
+              <span class="btn-text">&#9993; Send Message</span>
+              <div class="spinner" aria-hidden="true"></div>
+            </button>
+            <div class="form-status" id="formStatus" role="alert" aria-live="assertive"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section id="cta" aria-label="Call to action">
+    <div class="inner">
+      <div class="cta-box reveal">
+        <h2>Ready to Work <span>Together?</span></h2>
+        <p>Open to Data Analyst roles, Digital Marketing opportunities, and freelance projects. Dashboards, automation, or full-funnel strategies — I'm here.</p>
+        <div class="cta-btns">
+          <a href="#contact" class="btn-p" aria-label="Go to contact form">&#128172; Send a Message</a>
+          <a href="mailto:Kuljeet3269@gmail.com" class="btn-s" aria-label="Email directly">&#9993; Email Directly</a>
+        </div>
+        <div class="qlinks">
+          <a href="https://wa.me/918434218640" target="_blank" rel="noopener noreferrer" class="qlink" aria-label="WhatsApp">&#128241; WhatsApp Me</a>
+          <a href="https://www.linkedin.com/in/kuljeet09" target="_blank" rel="noopener noreferrer" class="qlink" aria-label="LinkedIn">&#128188; LinkedIn</a>
+          <a href="https://github.com/kuljeet3269-ctrl" target="_blank" rel="noopener noreferrer" class="qlink" aria-label="GitHub">&#128049; GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer role="contentinfo">
+    <div class="foot-inner">
+      <div class="foot-logo" aria-label="KKS Logo">KKS.</div>
+      <nav class="foot-links" aria-label="Footer navigation">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="foot-social" aria-label="Social links">
+        <a href="mailto:Kuljeet3269@gmail.com" class="sbtn" title="Email" aria-label="Email">&#9993;</a>
+        <a href="https://wa.me/918434218640" target="_blank" rel="noopener noreferrer" class="sbtn" title="WhatsApp" aria-label="WhatsApp">&#128241;</a>
+        <a href="https://www.linkedin.com/in/kuljeet09" target="_blank" rel="noopener noreferrer" class="sbtn" title="LinkedIn" aria-label="LinkedIn">&#128188;</a>
+        <a href="https://github.com/kuljeet3269-ctrl" target="_blank" rel="noopener noreferrer" class="sbtn" title="GitHub" aria-label="GitHub">&#128049;</a>
+      </div>
+      <div class="foot-copy">&copy; 2025 Kuljeet Kumar Singh. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+  (function() {
+    'use strict';
+
+    // ── FEATURE DETECTION ──────────────────────────────────────────────
+    var supportsIntersectionObserver = 'IntersectionObserver' in window;
+
+    // ── PASSIVE EVENT LISTENER DETECTION ───────────────────────────────
+    // Old Safari / IE don't support passive option — detect safely
+    var supportsPassive = false;
+    try {
+      var opts = Object.defineProperty({}, 'passive', {
+        get: function() { supportsPassive = true; return true; }
+      });
+      window.addEventListener('testPassive', null, opts);
+      window.removeEventListener('testPassive', null, opts);
+    } catch(e) {}
+    var passiveOpt = supportsPassive ? { passive: true } : false;
+
+    // ── CUSTOM CURSOR (desktop / hover capable only) ────────────────────
+    var hasFinePointer = false;
+    try {
+      hasFinePointer = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    } catch(e) {}
+
+    if (hasFinePointer) {
+      var cursor = document.getElementById('cursor');
+      var ring = document.getElementById('cursor-ring');
+      if (cursor && ring) {
+        var mx = 0, my = 0, rx = 0, ry = 0;
+        document.addEventListener('mousemove', function(e) {
+          mx = e.clientX; my = e.clientY;
+          cursor.style.left = (mx - 5) + 'px';
+          cursor.style.top = (my - 5) + 'px';
+        });
+        var animateCursor = function() {
+          rx += (mx - rx) * 0.12;
+          ry += (my - ry) * 0.12;
+          ring.style.left = (rx - 17) + 'px';
+          ring.style.top = (ry - 17) + 'px';
+          requestAnimationFrame(animateCursor);
+        };
+        if (typeof requestAnimationFrame !== 'undefined') animateCursor();
+        var interactives = document.querySelectorAll('a, button, .pcard, .ccard, .skill-tag, .contact-link');
+        for (var i = 0; i < interactives.length; i++) {
+          (function(el) {
+            el.addEventListener('mouseenter', function() {
+              cursor.style.cssText += ';-webkit-transform:scale(2);transform:scale(2)';
+              ring.style.opacity = '.8';
+              ring.style.borderColor = 'var(--accent2)';
+            });
+            el.addEventListener('mouseleave', function() {
+              cursor.style.cssText += ';-webkit-transform:scale(1);transform:scale(1)';
+              ring.style.opacity = '.5';
+              ring.style.borderColor = 'var(--accent)';
+            });
+          })(interactives[i]);
+        }
+      }
+    } else {
+      var c = document.getElementById('cursor');
+      var cr = document.getElementById('cursor-ring');
+      if (c) c.style.display = 'none';
+      if (cr) cr.style.display = 'none';
+    }
+
+    // ── READING PROGRESS BAR ────────────────────────────────────────────
+    var progressBar = document.getElementById('progress-bar');
+    var updateProgress = function() {
+      if (!progressBar) return;
+      var docH = document.documentElement.scrollHeight - window.innerHeight;
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      var pct = docH > 0 ? (scrollTop / docH) * 100 : 0;
+      progressBar.style.width = Math.min(pct, 100) + '%';
+    };
+    window.addEventListener('scroll', updateProgress, passiveOpt);
+
+    // ── NAVBAR SCROLL ───────────────────────────────────────────────────
+    var navbar = document.getElementById('navbar');
+    var scrollTopBtn = document.getElementById('scrollTop');
+
+    var addClass = function(el, cls) {
+      if (!el) return;
+      if (el.classList) { el.classList.add(cls); }
+      else if (el.className.indexOf(cls) === -1) { el.className += ' ' + cls; }
+    };
+    var removeClass = function(el, cls) {
+      if (!el) return;
+      if (el.classList) { el.classList.remove(cls); }
+      else { el.className = el.className.replace(new RegExp('(^|\\s)' + cls + '(\\s|$)', 'g'), ' ').replace(/\s+/g, ' ').replace(/^\s|\s$/g, ''); }
+    };
+
+    var handleScroll = function() {
+      var scrollY = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      if (scrollY > 60) addClass(navbar, 'scrolled'); else removeClass(navbar, 'scrolled');
+      if (scrollY > 300) addClass(scrollTopBtn, 'visible'); else removeClass(scrollTopBtn, 'visible');
+      updateProgress();
+    };
+    window.addEventListener('scroll', handleScroll, passiveOpt);
+
+    // ── SCROLL TO TOP ───────────────────────────────────────────────────
+    if (scrollTopBtn) {
+      scrollTopBtn.addEventListener('click', function() {
+        try { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+        catch(e) {
+          // Manual smooth scroll fallback for old Safari
+          var start = window.pageYOffset || document.documentElement.scrollTop || 0;
+          var duration = 600;
+          var startTime = null;
+          var ease = function(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; };
+          var step = function(ts) {
+            if (!startTime) startTime = ts;
+            var elapsed = ts - startTime;
+            var progress = Math.min(elapsed / duration, 1);
+            window.scrollTo(0, start * (1 - ease(progress)));
+            if (elapsed < duration) requestAnimationFrame(step);
+          };
+          if (typeof requestAnimationFrame !== 'undefined') requestAnimationFrame(step);
+          else { document.documentElement.scrollTop = 0; document.body.scrollTop = 0; }
+        }
+      });
+    }
+
+    // ── HAMBURGER MENU ──────────────────────────────────────────────────
+    var hamburger = document.getElementById('hamburger');
+    var navLinks = document.getElementById('navLinks');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', function() {
+        var isOpen = navLinks.className.indexOf('open') !== -1;
+        if (isOpen) {
+          removeClass(navLinks, 'open');
+          removeClass(hamburger, 'open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        } else {
+          addClass(navLinks, 'open');
+          addClass(hamburger, 'open');
+          hamburger.setAttribute('aria-expanded', 'true');
+        }
+      });
+      var links = navLinks.querySelectorAll('a');
+      for (var j = 0; j < links.length; j++) {
+        links[j].addEventListener('click', function() {
+          removeClass(navLinks, 'open');
+          removeClass(hamburger, 'open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      }
+      document.addEventListener('click', function(e) {
+        var target = e.target || e.srcElement;
+        if (!hamburger.contains(target) && !navLinks.contains(target)) {
+          removeClass(navLinks, 'open');
+          removeClass(hamburger, 'open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    // ── THEME TOGGLE ────────────────────────────────────────────────────
+    var themeToggle = document.getElementById('themeToggle');
+    var savedTheme = '';
+    try { savedTheme = localStorage.getItem('kks-theme') || ''; } catch(e) {}
+    if (savedTheme === 'light') {
+      addClass(document.body, 'light');
+      if (themeToggle) themeToggle.textContent = '\u263D';
+    }
+    if (themeToggle) {
+      themeToggle.addEventListener('click', function() {
+        var isLight = document.body.className.indexOf('light') !== -1;
+        if (isLight) {
+          removeClass(document.body, 'light');
+          themeToggle.textContent = '\u2600';
+          try { localStorage.setItem('kks-theme', 'dark'); } catch(e) {}
+        } else {
+          addClass(document.body, 'light');
+          themeToggle.textContent = '\u263D';
+          try { localStorage.setItem('kks-theme', 'light'); } catch(e) {}
+        }
+      });
+    }
+
+    // ── REVEAL ON SCROLL ────────────────────────────────────────────────
+    var reveals = document.querySelectorAll('.reveal');
+    if (supportsIntersectionObserver) {
+      var observer = new IntersectionObserver(function(entries) {
+        for (var k = 0; k < entries.length; k++) {
+          if (entries[k].isIntersecting) {
+            addClass(entries[k].target, 'visible');
+            observer.unobserve(entries[k].target);
+          }
+        }
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      for (var r = 0; r < reveals.length; r++) observer.observe(reveals[r]);
+    } else {
+      // Fallback: show all immediately for older browsers
+      for (var r2 = 0; r2 < reveals.length; r2++) {
+        addClass(reveals[r2], 'visible');
+        reveals[r2].style.opacity = '1';
+        reveals[r2].style.webkitTransform = 'none';
+        reveals[r2].style.transform = 'none';
+      }
+    }
+
+    // ── CHAR COUNTER ────────────────────────────────────────────────────
+    var msgArea = document.getElementById('message');
+    var charCount = document.getElementById('charCount');
+    if (msgArea && charCount) {
+      msgArea.addEventListener('input', function() {
+        var len = msgArea.value.length;
+        charCount.textContent = len + ' / 1000';
+        charCount.className = 'char-counter';
+        if (len > 900) charCount.className = 'char-counter over';
+        else if (len > 700) charCount.className = 'char-counter warn';
+      });
+    }
+
+    // ── CONTACT FORM ────────────────────────────────────────────────────
+    var form = document.getElementById('contactForm');
+    var submitBtn = document.getElementById('submitBtn');
+    var formStatus = document.getElementById('formStatus');
+
+    var showStatus = function(type, msg) {
+      if (!formStatus) return;
+      formStatus.className = 'form-status ' + type;
+      formStatus.textContent = (type === 'success' ? '\u2713 ' : '\u26A0 ') + msg;
+      setTimeout(function() {
+        if (formStatus) { formStatus.className = 'form-status'; formStatus.textContent = ''; }
+      }, 6000);
+    };
+
+    var setLoading = function(loading) {
+      if (!submitBtn) return;
+      if (loading) { addClass(submitBtn, 'loading'); submitBtn.disabled = true; }
+      else { removeClass(submitBtn, 'loading'); submitBtn.disabled = false; }
+    };
+
+    var validateEmail = function(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    };
+
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var fname = (document.getElementById('fname') || {}).value || '';
+        var lname = (document.getElementById('lname') || {}).value || '';
+        var email = (document.getElementById('email') || {}).value || '';
+        var phone = (document.getElementById('phone') || {}).value || '';
+        var subject = (document.getElementById('subject') || {}).value || '';
+        var message = (document.getElementById('message') || {}).value || '';
+
+        if (!fname.trim()) { showStatus('error', 'Please enter your first name.'); document.getElementById('fname').focus(); return; }
+        if (!email.trim() || !validateEmail(email.trim())) { showStatus('error', 'Please enter a valid email address.'); document.getElementById('email').focus(); return; }
+        if (!subject) { showStatus('error', 'Please select a topic.'); document.getElementById('subject').focus(); return; }
+        if (!message.trim() || message.trim().length < 10) { showStatus('error', 'Please write a message (at least 10 characters).'); document.getElementById('message').focus(); return; }
+
+        setLoading(true);
+        var fullName = (fname + ' ' + lname).trim();
+        var bodyLines = [
+          'Hi Kuljeet,', '',
+          'You have a new message from your portfolio website.', '',
+          '--- Contact Details ---',
+          'Name: ' + fullName,
+          'Email: ' + email,
+          phone ? 'Phone: ' + phone : null,
+          'Topic: ' + subject, '',
+          '--- Message ---',
+          message, '',
+          '---',
+          'Sent via KKS Portfolio Contact Form'
+        ];
+        var filteredLines = [];
+        for (var bi = 0; bi < bodyLines.length; bi++) {
+          if (bodyLines[bi] !== null) filteredLines.push(bodyLines[bi]);
+        }
+        var body = filteredLines.join('\n');
+        var mailSubject = 'Portfolio Enquiry: ' + subject + ' from ' + fullName;
+        var mailtoLink =
+          'mailto:Kuljeet3269@gmail.com' +
+          '?subject=' + encodeURIComponent(mailSubject) +
+          '&body=' + encodeURIComponent(body) +
+          '&cc=' + encodeURIComponent(email);
+
+        setTimeout(function() {
+          setLoading(false);
+          try {
+            window.location.href = mailtoLink;
+            showStatus('success', 'Your email client is opening! If it doesn\'t, email Kuljeet3269@gmail.com directly.');
+            form.reset();
+            if (charCount) { charCount.textContent = '0 / 1000'; charCount.className = 'char-counter'; }
+          } catch(err) {
+            showStatus('error', 'Could not open email client. Please email Kuljeet3269@gmail.com directly.');
+          }
+        }, 800);
+      });
+    }
+
+    // ── SMOOTH SCROLL for anchor links ─────────────────────────────────
+    var anchors = document.querySelectorAll('a[href^="#"]');
+    var smoothScrollTo = function(targetY) {
+      try { window.scrollTo({ top: targetY, behavior: 'smooth' }); }
+      catch(e) {
+        var start = window.pageYOffset || document.documentElement.scrollTop || 0;
+        var duration = 600;
+        var startTime = null;
+        var ease = function(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; };
+        var step = function(ts) {
+          if (!startTime) startTime = ts;
+          var elapsed = ts - startTime;
+          var progress = Math.min(elapsed / duration, 1);
+          var scrollY = start + (targetY - start) * ease(progress);
+          window.scrollTo(0, scrollY);
+          if (elapsed < duration) requestAnimationFrame(step);
+        };
+        if (typeof requestAnimationFrame !== 'undefined') requestAnimationFrame(step);
+        else { document.documentElement.scrollTop = targetY; document.body.scrollTop = targetY; }
+      }
+    };
+
+    for (var a = 0; a < anchors.length; a++) {
+      anchors[a].addEventListener('click', function(e) {
+        var href = this.getAttribute('href');
+        if (!href || href === '#') return;
+        var target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        var targetY = target.getBoundingClientRect().top + scrollTop - 70;
+        smoothScrollTo(targetY);
+      });
+    }
+
+  })();
+  </script>
+</body>
+</html>
